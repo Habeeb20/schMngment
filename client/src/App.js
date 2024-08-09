@@ -8,10 +8,6 @@ import TeacherDashboard from './pages/teacher/TeacherDashboard';
 import LoginPage from './pages/LoginPage';
 import AdminRegisterPage from './pages/admin/AdminRegisterPage';
 import ChooseUser from './pages/ChooseUser';
-import Auth from './pages/Auth';
-import FinanceDashboard from './pages/FinanceDashboard';
-import FinanceStudentForm from './pages/FinanceStudentForm';
-import FinanceExpenditure from './pages/FinanceExpenditure';
 
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
@@ -21,11 +17,7 @@ const App = () => {
 
       {currentRole === null &&
         <Routes>
-          <Route path="/financeauth" element={<Auth />} />
-          <Route path="/financedashboard" element={<FinanceDashboard />} />
-          <Route path="/financestudent" element={<FinanceStudentForm />} />
-          <Route path="/financeexpenditure" element={<FinanceExpenditure />} />
-
+        
           <Route path="/" element={<Homepage />} />
           <Route path="/choose" element={<ChooseUser visitor="normal" />} />
           <Route path="/chooseasguest" element={<ChooseUser visitor="guest" />} />
